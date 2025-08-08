@@ -1,13 +1,3 @@
-identity_token "aws" {
-  audience = ["terraform-stacks-private-preview"]
-}
-
-
-identity_token "k8s" {
-  audience = ["aws.workload.identity"]
-}
-
-
 deployment "DR" {
   inputs = {
     aws_identity_token = identity_token.aws.jwt
